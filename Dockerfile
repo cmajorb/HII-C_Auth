@@ -1,4 +1,8 @@
-FROM maven:3.2-jdk-7-onbuild
+FROM maven:3.2-jdk-8
 MAINTAINER Major Brown "cmajorb@gmail.com"
 COPY . /app
-CMD ["mvn jetty:run"]
+WORKDIR /app
+RUN mvn package
+RUN mvn clean install
+WORKDIR openid-connect-server-webapp
+CMD mvn jetty:run
