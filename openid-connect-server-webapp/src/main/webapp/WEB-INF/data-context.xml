@@ -53,9 +53,9 @@
 
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="jdbcUrl" value="jdbc:postgresql://localhost/oic" />
-		<property name="username" value="oic" />
-		<property name="password" value="oic" />
+		<property name="jdbcUrl" value="jdbc:postgresql://db01.healthcreek.org:5432/postgres" />
+		<property name="username" value="postgres" />
+		<property name="password" value="postgres" />
 	</bean>
 
 
