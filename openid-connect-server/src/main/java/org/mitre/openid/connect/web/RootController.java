@@ -42,6 +42,11 @@ public class RootController {
 		return "home";
 	}
 
+	@RequestMapping({"/Launch"})
+	public String showLaunchPage(ModelMap m) {
+		return "about";
+	}
+
 	@RequestMapping({"about", "about/"})
 	public String showAboutPage(ModelMap m) {
 		return "about";
