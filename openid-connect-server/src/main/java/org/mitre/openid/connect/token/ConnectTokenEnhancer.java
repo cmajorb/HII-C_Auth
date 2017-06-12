@@ -72,6 +72,8 @@ public class ConnectTokenEnhancer implements TokenEnhancer {
 	@Override
 	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken,	OAuth2Authentication authentication) {
 
+		accessToken.getAdditionalInformation().put("patient","1");
+
 		OAuth2AccessTokenEntity token = (OAuth2AccessTokenEntity) accessToken;
 		OAuth2Request originalAuthRequest = authentication.getOAuth2Request();
 
